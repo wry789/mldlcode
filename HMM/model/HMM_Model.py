@@ -56,7 +56,13 @@ class HiddenMarkov:
     def backward(self, Q, V, A, B, O, PI):
         N = len(Q) # 隐藏状态序列长度
         M = len(O) # 观测状态序列长度
-        alphas = np.zeros((N,M)) # 初始化后向概率
+        betas = np.zeros((N,M)) # 初始化后向概率
+        #算法原理 https://s1.ax1x.com/2020/10/21/BC1AC6.png
+
+        for t in range(M - 2, -1, -1): # 对观测序列逆向遍历
+            index_O = V.index(O[t+1])  # 观测为t+1的
+            for i in range(N): # 通过t+1时刻N个状态的后向概率计算t时刻i状态的后向概率
+                betas[i,t] = np.dot()
 
 
 
