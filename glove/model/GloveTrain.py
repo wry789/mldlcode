@@ -1,5 +1,5 @@
 import os
-os.chdir("C:\\Users\\wry\\Desktop\\deep-learning-examples-master\glove\\model")
+os.chdir("E:\\gitrep\\mldlcode\\glove\\model")
 import torch
 import torch.utils.data as tud  #Pytorch读取训练集需要用到torch.utils.data类
 from collections import Counter
@@ -11,7 +11,7 @@ import time
 import math
 import time
 import sys
-sys.path.append("C:\\Users\\wry\\Desktop\\deep-learning-examples-master\glove\\model")
+sys.path.append("E:\\gitrep\\mldlcode\\glove\\model")
 import matplotlib.pyplot as plt
 from glove_build_cooccurance import buildCooccuranceMatrix
 
