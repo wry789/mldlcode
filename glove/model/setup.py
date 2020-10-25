@@ -12,13 +12,3 @@ setup(ext_modules = cythonize(Extension(
     extra_compile_args=[],
     extra_link_args=[]
 )))
-
-
-import numpy as np
-import math
-def buildWeightMatrix_apply(element,xmax):
-    return math.pow(element/xmax,0.75) if element >=xmax else 1
-xmax=100.0
-b=np.array([[100,101,22],[999,222,22]])
-buildWeightMatrix_apply_np = np.vectorize(buildWeightMatrix_apply)
-buildWeightMatrix_apply_np(b,xmax)
